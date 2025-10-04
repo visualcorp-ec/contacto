@@ -1,231 +1,353 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Visual Corp | Links y Contacto</title>
-  <meta name="description" content="Agencia de publicidad y marketing en Milagro, Ecuador. Diseño que conecta y productos gráficos que impresionan. Contáctanos por WhatsApp o visita nuestras redes." />
+<html lang="es"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Visual Corp | Contacto</title>
+  <meta name="description" content="Contacta con Visual Corp en Milagro, Ecuador. Encuéntranos en el mapa, mira nuestros trabajos y contáctanos por WhatsApp, redes sociales y más.">
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Visual Corp | Links y Contacto" />
-    <!-- <meta property="og:description" content="Agencia de publicidad y marketing en Milagro, Ecuador. Diseño que conecta y productos que impresionan." /> -->
-  <meta property="og:image" content="https://d1so26dimrz1o2.cloudfront.net/uploads/avatars/g32HrUdRExn93slL9Joo4T2nYbEXrN7Pog52QeH8.jpg" />
-  <meta property="og:locale" content="es_EC" />
-
-  <link rel="icon" href="https://d1so26dimrz1o2.cloudfront.net/uploads/avatars/g32HrUdRExn93slL9Joo4T2nYbEXrN7Pog52QeH8.jpg" />
-
-  <!-- Fonts & Icons -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+  <link rel="icon" href="https://d1so26dimrz1o2.cloudfront.net/uploads/avatars/g32HrUdRExn93slL9Joo4T2nYbEXrN7Pog52QeH8.jpg">
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&amp;display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --bg: #000000;            /* fondo negro puro */
-      --card: #0e0f15;          /* tarjetas oscuras */
-      --muted: #c9c9d4;
-      --text: #ffffff;
-      --accent: #d9bc36;        /* dorado Visual Corp */
-      --accent-2: #d49600;      /* dorado profundo */
-      --ring: rgba(217, 188, 54, 0.28);
-      --shadow: 0 8px 40px rgba(0, 0, 0, 0.55);
-      --sep: rgba(255,255,255,0.08);
+    /* ===== ESTILOS BASE Y PALETA DE COLORES ===== */
+    :root{
+      --bg:#0b0d10; --panel:#111318; --muted:#979aa3; --text:#f4f6fb;
+      --brand:#f2b705; --accent:var(--brand); --success:#25D366; --danger:#f43f5e;
+      --sep:rgba(255,255,255,.08); --ring:rgba(242,183,5,.6);
+      --ease:cubic-bezier(.22,.84,.36,1);
     }
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      margin: 0;
-      font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Helvetica Neue', Arial;
-      color: var(--text);
-      background: var(--bg);
-      display: grid; place-items: center; padding: 24px;
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Arial;
+      color:var(--text);
+      background:radial-gradient(1200px 800px at 10% -10%, #1a1c23 0%, #0b0d10 60%);
     }
+    .wrap{max-width:900px;margin:auto;padding:22px}
 
-    .wrap {
-      width: 100%; max-width: 980px; /* 2 columnas */
-      background: #07080c; /* oscuro, sin amarillos */
-      border: 1px solid var(--sep); border-radius: 28px; box-shadow: var(--shadow);
-      padding: 28px 26px 26px; position: relative; overflow: clip;
+    /* ===== HEADER Y ELEMENTOS GLOBALES ===== */
+    header{
+      position:sticky; top:0; z-index:50;
+      background:rgba(8,9,12,.6); backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--sep);
+      padding:10px 18px; border-radius:20px; margin: 12px 0;
     }
-
-    header { text-align: center; }
-    .logo {
-      width: 140px; height: 140px; object-fit: cover; border-radius: 50%;
-      border: 4px solid var(--accent);
-      box-shadow: 0 0 0 6px rgba(217,188,54,.12), 0 18px 50px rgba(0,0,0,.55);
-      display: block; margin: 0 auto 16px;
+    header.scrolled{box-shadow:0 10px 30px rgba(0,0,0,.45);transform:translateY(-2px) scale(1.01);} 
+    .header-content{
+      max-width: 1200px; margin-inline: auto;
+      display:flex; gap:16px; align-items:center; justify-content:space-between;
     }
-    .title { font-size: clamp(1.8rem, 2.4rem, 2.8rem); font-weight: 700; letter-spacing: .3px; }
-    .subtitle { color: var(--muted); margin-top: 10px; line-height: 1.55; font-size: clamp(1.1rem, 1.2rem + 0.6vw, 1.6rem); font-weight: 700; font-style: italic; }
-    .badge {
-      display: inline-flex; align-items: center; gap: 8px; margin-top: 14px;
-      padding: 8px 12px; border-radius: 999px; background: #151621; color: #e8e6ff; font-size: .95rem;
-      border: 1px solid var(--sep);
+    .brand{display:flex;align-items:center;gap:14px; text-decoration: none; color:var(--text)}
+    .brand img{width:50px;height:50px;border-radius:14px;object-fit:cover;border:2px solid var(--accent);box-shadow:0 0 0 4px rgba(242,183,5,.12)}
+    .title{font-weight:700}
+    .badge{display:inline-flex;gap:8px;align-items:center;background:#1a1d24;border:1px solid var(--sep);border-radius:999px;padding:8px 12px;color:var(--muted);font-weight:600}
+    .badge i{color:var(--accent)}
+
+    .hero{
+      text-align: center;
+      margin:28px 0; padding:28px; border-radius:24px;
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border:1px solid var(--sep);
     }
-    .badge i { color: var(--accent); }
+    .hero h1{margin:0 0 8px;font-size:clamp(2rem, 5vw, 3rem);font-weight:800; line-height:1.1;}
+    .hero p{margin:0;color:var(--muted); max-width: 600px; margin-inline: auto;}
 
-    /* HORARIO */
-    .schedule {
-      margin-top: 24px; display: grid; grid-template-columns: 56px 1fr auto; gap: 14px; align-items: center;
-      background: var(--card); border: 1px solid var(--sep); border-radius: 16px; padding: 16px 18px;
+    /* ===== ENLACES RÁPIDOS: 3 Asesores + 3 Redes ===== */
+    .quick-links h2{margin:0 0 18px; font-size:1.5rem;}
+    .link-columns{display:grid; grid-template-columns:1fr 1fr; gap:18px; align-items:start}
+    .link-col h3{margin:0 0 12px; font-size:1.05rem; letter-spacing:.4px; color:var(--accent)}
+    @media (max-width: 820px){ .link-columns{grid-template-columns:1fr} }
+
+    .link-card{
+      display:grid; grid-template-columns:48px 1fr auto; gap:14px; align-items:center;
+      text-decoration:none; color:var(--text);
+      background:var(--panel); border:1px solid var(--sep); border-radius:18px; padding:16px 18px; 
+      min-height:88px; box-shadow: 0 6px 22px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.04);
+      transition: transform .15s var(--ease), border-color .2s var(--ease), box-shadow .2s var(--ease);
     }
-    .schedule .clock { width: 56px; height: 56px; display:grid;place-items:center; border-radius: 12px;
-      background: linear-gradient(180deg, rgba(217,188,54,.12), rgba(212,150,0,.06)); border: 1px solid rgba(217,188,54,.32); }
-    .schedule .clock i { color: var(--accent); font-size: 22px; }
-    .schedule h3 { margin: 0; font-size: 1.25rem; }
-    .hours { font-size: .98rem; color: var(--muted); line-height: 1.5; }
+    .link-card:hover{ transform: translateY(-1px); border-color: rgba(242,183,5,.45); box-shadow: 0 12px 32px rgba(0,0,0,.45)}
+    .link-card:focus-visible{ outline:none; box-shadow: 0 0 0 6px var(--ring);} 
+    .link-card .icon{ width:48px; height:48px; display:grid; place-items:center; border-radius:14px; border:1px solid var(--sep)}
+    .link-card .label{ font-weight:700}
+    .link-card .sub{ color:var(--muted); font-size:.95rem; margin-top:2px}
+    .link-card .cta{ font-weight:700; color:var(--accent)}
 
-    /* DOS COLUMNAS */
-    .columns { margin-top: 26px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-items: start; }
-    .col { background: transparent; }
-    .col h4 { margin: 0 0 10px; font-size: 1.05rem; letter-spacing:.4px; color: var(--accent); }
+    /* Acentos por canal */
+    .whatsapp .icon{ background:linear-gradient(180deg, rgba(37,211,102,.18), rgba(37,211,102,.06)); border-color: rgba(37,211,102,.35) }
+    .whatsapp .icon i, .whatsapp .cta{ color:#25D366 }
 
-    /* Botones */
-    .grid { display: grid; gap: 12px; grid-auto-rows: 1fr; }
-    .btn {
-      --pad-y: 16px; --pad-x: 18px;
-      display: grid; grid-template-columns: 44px 1fr auto; gap: 14px; align-items: center;
-      text-decoration: none; background: var(--card); color: var(--text);
-      padding: var(--pad-y) var(--pad-x); border-radius: 16px; border: 1px solid var(--sep);
-      box-shadow: 0 6px 22px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.04);
-      transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease;
-      min-height: 86px; /* alto consistente */
-    }
-    .btn:hover { transform: translateY(-1px); border-color: rgba(217,188,54,.45); box-shadow: 0 10px 30px rgba(0,0,0,.45); }
-    .btn:focus-visible { outline: none; box-shadow: 0 0 0 6px var(--ring); }
+    .instagram .icon{ background:linear-gradient(180deg, rgba(225,48,108,.18), rgba(131,58,180,.08)); border-color: rgba(225,48,108,.35) }
+    .instagram .icon i, .instagram .cta{ color:#e1306c }
 
-    .btn .icon { width: 44px; height: 44px; display:grid; place-items:center; border-radius: 12px; }
-    .btn .label { font-weight: 600; }
-    .btn .sub { color: var(--muted); font-size: .92rem; }
-    .btn .cta { font-weight: 600; color: var(--accent); }
+    .tiktok .icon{ background:linear-gradient(180deg, rgba(0,242,234,.18), rgba(255,0,80,.06)); border-color: rgba(0,242,234,.3) }
+    .tiktok .icon i, .tiktok .cta{ color:#00f2ea }
 
-    /* Accentos por red */
-    .whatsapp .icon { background: linear-gradient(180deg, rgba(37,211,102,0.14), rgba(37,211,102,0.06)); border: 1px solid rgba(37,211,102,.35); }
-    .whatsapp .icon i, .whatsapp .cta { color: #25d366; }
+    .facebook .icon{ background:linear-gradient(180deg, rgba(24,119,242,.18), rgba(24,119,242,.06)); border-color: rgba(24,119,242,.35) }
+    .facebook .icon i, .facebook .cta{ color:#1877f2 }
 
-    .instagram .icon { background: linear-gradient(180deg, rgba(225,48,108,.18), rgba(131,58,180,.08)); border: 1px solid rgba(225,48,108,.35); }
-    .instagram .icon i, .instagram .cta { color: #e1306c; }
+    /* ===== TARJETAS DE CONTENIDO ===== */
+    .content-grid { display:grid; gap: 20px; margin-top: 20px; margin-bottom: 40px; }
+    .card-full { background: var(--panel); border: 1px solid var(--sep); border-radius: 20px; padding: 24px; overflow: hidden; }
+    .card-full h2 { margin-top: 0; margin-bottom: 25px; font-size: 1.8rem; border-bottom: 1px solid var(--sep); padding-bottom: 15px; }
 
-    .tiktok .icon { background: linear-gradient(180deg, rgba(0,242,234,.14), rgba(255,0,80,.06)); border: 1px solid rgba(0,242,234,.35); }
-    .tiktok .icon i, .tiktok .cta { color: #00f2ea; }
+    /* INFO (estructura que ya tenías) */
+    .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 30px; }
+    .info-item { display: flex; align-items: flex-start; gap: 15px; }
+    .info-item i { color: var(--accent); font-size: 1.6rem; margin-top: 5px; flex-shrink: 0; width: 30px; text-align: center; }
+    .info-item-content h5 { margin: 0 0 5px; font-size: 1.1rem; }
+    .info-item-content p { margin: 0; color: var(--muted); line-height: 1.6; }
 
-    .facebook .icon { background: linear-gradient(180deg, rgba(24,119,242,.14), rgba(24,119,242,.06)); border: 1px solid rgba(24,119,242,.35); }
-    .facebook .icon i, .facebook .cta { color: #1877f2; }
+    .contact-actions { margin-top: 30px; padding-top: 25px; border-top: 1px solid var(--sep); display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn{ display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 18px; border-radius:14px;font-weight:600;background:#2c313a;color:#fff; border:1px solid var(--sep); text-decoration:none; cursor:pointer; font-family:inherit; font-size: 1rem; transition:transform .18s var(--ease), background-color .18s var(--ease); }
+    .btn:hover{transform:translateY(-2px); background-color: #3d4452;}
+    .btn.whatsapp{background-color:var(--success);} .btn.messenger{background-color:#0084FF;} .btn.email{background-color:#5865F2;}
 
-    footer { margin-top: 26px; text-align: center; color: var(--muted); font-size: .9rem; }
+    .status-display { display:inline-flex; align-items:center; gap:8px; margin-top:10px; padding:6px 12px; border-radius:999px; font-weight:600; font-size:.85rem; }
+    .status-display.open { background-color: rgba(37, 211, 102, .15); color: var(--success); }
+    .status-display.closed { background-color: rgba(244, 63, 94, .15); color: var(--danger); }
+    #status-indicator { width:10px; height:10px; border-radius:50%; }
+    #status-indicator.open { background-color: var(--success); animation: pulse-green 1.5s infinite; }
+    #status-indicator.closed { background-color: var(--danger); }
+    @keyframes pulse-green { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, .7);} 70% { box-shadow: 0 0 0 8px rgba(37, 211, 102, 0);} 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);} }
 
-    /* Responsive */
-    @media (max-width: 820px) { .columns { grid-template-columns: 1fr; } }
-    @media (max-width: 460px) {
-      .btn { grid-template-columns: 38px 1fr; }
-      .btn .cta { display: none; }
-      .logo { width: 120px; height: 120px; }
-      .schedule { grid-template-columns: 48px 1fr; }
-    }
+    /* MAPA, VIDEO Y GALERÍA */
+    .map-container { position: relative; overflow: hidden; width: 100%; padding-top: 56.25%; border-radius: 14px; }
+    .map-container iframe { position: absolute; inset:0; width:100%; height:100%; border:none; }
+    .video-container video { width: 100%; border-radius: 14px; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 15px; }
+    .gallery-grid img { width: 100%; height: 120px; object-fit: cover; border-radius: 12px; cursor: pointer; transition: transform .2s var(--ease), box-shadow .2s var(--ease); }
+    .gallery-grid img:hover { transform: scale(1.05); box-shadow: 0 8px 25px rgba(0,0,0,0.4); }
+
+    /* Lightbox y animaciones */
+    .lightbox{position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.8);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .35s var(--ease), visibility .35s var(--ease);} 
+    .lightbox.open{display:flex;opacity:1;visibility:visible;pointer-events:auto;} 
+    .lightbox img{max-width:min(96vw, 900px); max-height:82vh; border-radius:20px; border:1px solid var(--sep); transform:scale(.96); transition:transform .35s var(--ease);} 
+    .lightbox.open img{transform:scale(1);} 
+    @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}} 
+    .hero, .card-full { animation: fadeUp 0.7s var(--ease) both; }
+    .card-full:nth-of-type(1) { animation-delay: 0.08s; }
+    .card-full:nth-of-type(2) { animation-delay: 0.16s; }
+    .card-full:nth-of-type(3) { animation-delay: 0.24s; }
+    .card-full:nth-of-type(4) { animation-delay: 0.32s; }
   </style>
 </head>
 <body>
-  <main class="wrap" role="main">
-    <header>
-      <img src="https://d1so26dimrz1o2.cloudfront.net/uploads/avatars/g32HrUdRExn93slL9Joo4T2nYbEXrN7Pog52QeH8.jpg" alt="Logo Visual Corp" class="logo" />
-      <h1 class="title">Visual Corp</h1>
-        <!--<p class="subtitle">Agencia de publicidad y marketing 📣 Diseño que conecta; productos que impresionan 🪄<br/>Milagro, Guayas 🇪🇨</p>-->
-      <div class="badge" aria-hidden="true"><i class="fa-solid fa-sparkles"></i> Atención personalizada</div>
+  <div class="wrap">
+    <header class="">
+      <div class="header-content">
+        <a href="#" class="brand">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmSKnD00M-kkEpOeoGxEL9UP7_Zfgf8Ug33Q&amp;s" alt="Logo Visual Corp">
+          <div class="title">Visual Corp</div>
+        </a>
+        <div class="badge"><i class="fa-solid fa-location-dot"></i> Milagro, Ecuador</div>
+      </div>
     </header>
 
-    <!-- HORARIO DE ATENCIÓN-->
-    <section class="schedule" aria-label="Horario de atención">
-      <div class="clock" aria-hidden="true"><i class="fa-regular fa-clock"></i></div>
-      <div>
-        <h3>Horario de atención</h3>
-        <div class="hours">
-          <strong>Lunes a Viernes</strong> · 8:30 am – 6:00 pm<br/>
-          <strong>Sábados</strong> · 8:30 am – 12:30 pm<br/>
-          <strong>Domingo</strong> · Cerrado
+    <main>
+      <section class="hero">
+        <h1>Visítanos o Escríbenos</h1>
+        <p>Estamos listos para ayudarte a dar vida a tus ideas. Encuéntranos en nuestra oficina, mira nuestros trabajos y contáctanos.</p>
+      </section>
+
+      <!-- ENLACES RÁPIDOS (3 asesores + 3 redes) -->
+      <article class="card-full quick-links" aria-labelledby="links-title">
+        <h2 id="links-title">Accesos rápidos</h2>
+        <div class="link-columns">
+          <!-- Columna WhatsApp -->
+          <section class="link-col" aria-labelledby="whatsapp-title">
+            <h3 id="whatsapp-title">Contactos por WhatsApp</h3>
+
+            <a class="link-card whatsapp" href="https://wa.me/593997078212" target="_blank" rel="noopener" aria-label="Chatear con Asesor Comercial 1 por WhatsApp">
+              <div class="icon"><i class="fa-brands fa-whatsapp"></i></div>
+              <div>
+                <div class="label">Asesor Comercial 1</div>
+                <div class="sub">Respuesta rápida por WhatsApp</div>
+              </div>
+              <div class="cta">Chatear</div>
+            </a>
+
+            <a class="link-card whatsapp" href="https://wa.me/593967872396" target="_blank" rel="noopener" aria-label="Chatear con Asesor Comercial 2 por WhatsApp">
+              <div class="icon"><i class="fa-brands fa-whatsapp"></i></div>
+              <div>
+                <div class="label">Asesor Comercial 2</div>
+                <div class="sub">Cotizaciones y pedidos</div>
+              </div>
+              <div class="cta">Chatear</div>
+            </a>
+
+            <a class="link-card whatsapp" href="https://wa.me/593989260442" target="_blank" rel="noopener" aria-label="Chatear con Asesor Comercial 3 por WhatsApp">
+              <div class="icon"><i class="fa-brands fa-whatsapp"></i></div>
+              <div>
+                <div class="label">Asesor Comercial 3</div>
+                <div class="sub">Seguimiento de órdenes</div>
+              </div>
+              <div class="cta">Chatear</div>
+            </a>
+          </section>
+
+          <!-- Columna Redes Sociales -->
+          <section class="link-col" aria-labelledby="rrss-title">
+            <h3 id="rrss-title">Redes Sociales</h3>
+
+            <a class="link-card instagram" href="https://www.instagram.com/visualcorp.ec" target="_blank" rel="noopener" aria-label="Ver perfil de Instagram de Visual Corp">
+              <div class="icon"><i class="fa-brands fa-instagram"></i></div>
+              <div>
+                <div class="label">Instagram</div>
+                <div class="sub">Portafolio, historias y promociones</div>
+              </div>
+              <div class="cta">Ver perfil</div>
+            </a>
+
+            <a class="link-card tiktok" href="https://www.tiktok.com/@visualcorp.ec" target="_blank" rel="noopener" aria-label="Ver videos en TikTok de Visual Corp">
+              <div class="icon"><i class="fa-brands fa-tiktok"></i></div>
+              <div>
+                <div class="label">TikTok</div>
+                <div class="sub">Reels, detrás de cámaras y tips</div>
+              </div>
+              <div class="cta">Ver videos</div>
+            </a>
+
+            <a class="link-card facebook" href="https://www.facebook.com/visualcorpec" target="_blank" rel="noopener" aria-label="Abrir Facebook de Visual Corp">
+              <div class="icon"><i class="fa-brands fa-facebook-f"></i></div>
+              <div>
+                <div class="label">Facebook</div>
+                <div class="sub">Novedades y contacto</div>
+              </div>
+              <div class="cta">Abrir</div>
+            </a>
+          </section>
         </div>
-      </div>
-      <div class="cta" style="color:var(--accent);font-weight:700">¡Escríbenos!</div>
-    </section>
+      </article>
 
-    <!-- DOS COLUMNAS: WHATSAPP | REDES -->
-    <section class="columns">
-      <!-- Columna WhatsApp -->
-      <div class="col">
-        <h4>Contactos por WhatsApp</h4>
-        <div class="grid">
-          <a class="btn whatsapp" href="https://wa.me/message/LASEIEUO6HPBD1" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp al Asesor Comercial 1">
-            <div class="icon" aria-hidden="true"><i class="fa-brands fa-whatsapp"></i></div>
-            <div>
-              <div class="label">Asesor Comercial 1</div>
-              <div class="sub">Respuesta rápida por WhatsApp</div>
+      <!-- INFORMACIÓN DE CONTACTO (sección existente) -->
+      <article class="card-full">
+        <h2>Información de Contacto</h2>
+        <div class="info-grid">
+          <div class="info-item">
+            <i class="fa-solid fa-map-marker-alt" aria-hidden="true"></i>
+            <div class="info-item-content">
+              <h5>Dirección</h5>
+              <p>Cdla. La Pradera, Calle Las Palmas y Av. Los Chirijos. Milagro, Ecuador.</p>
             </div>
-            <div class="cta">Chatear</div>
-          </a>
-
-          <a class="btn whatsapp" href="https://wa.me/593997078212" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp al Asesor Comercial 2">
-            <div class="icon" aria-hidden="true"><i class="fa-brands fa-whatsapp"></i></div>
-            <div>
-              <div class="label">Asesor Comercial 2</div>
-              <div class="sub">Cotizaciones y pedidos</div>
+          </div>
+          <div class="info-item">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            <div class="info-item-content">
+              <h5>Teléfono</h5>
+              <p>+593 99 943 0219</p>
             </div>
-            <div class="cta">Chatear</div>
-          </a>
-
-          <a class="btn whatsapp" href="https://wa.me/593989260442" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp al Asesor Comercial 3">
-            <div class="icon" aria-hidden="true"><i class="fa-brands fa-whatsapp"></i></div>
-            <div>
-              <div class="label">Asesor Comercial 3</div>
-              <div class="sub">Seguimiento de órdenes</div>
+          </div>
+          <div class="info-item">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            <div class="info-item-content">
+              <h5>Email</h5>
+              <p>visualcorp@hotmail.com</p>
             </div>
-            <div class="cta">Chatear</div>
-          </a>
+          </div>
+          <div class="info-item">
+            <i class="fa-regular fa-clock" aria-hidden="true"></i>
+            <div class="info-item-content">
+              <h5>Horario de Atención</h5>
+              <p>L-V: 9:00-18:00 | S: 9:00-13:00</p>
+              <div class="status-display open" id="status-container">
+                <span id="status-indicator" aria-hidden="true" class="open"></span>
+                <span id="status-text">Abierto ahora</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <!-- Columna Redes Sociales -->
-      <div class="col">
-        <h4>Redes Sociales</h4>
-        <div class="grid">
-          <a class="btn instagram" href="https://www.instagram.com/visualcorpec/" target="_blank" rel="noopener" aria-label="Abrir Instagram de Visual Corp">
-            <div class="icon" aria-hidden="true"><i class="fa-brands fa-instagram"></i></div>
-            <div>
-              <div class="label">Instagram</div>
-              <div class="sub">Portafolio, historias y promociones</div>
-            </div>
-            <div class="cta">Ver perfil</div>
-          </a>
-
-          <a class="btn tiktok" href="https://www.tiktok.com/@visualcorpmilagro" target="_blank" rel="noopener" aria-label="Abrir TikTok de Visual Corp">
-            <div class="icon" aria-hidden="true"><i class="fa-brands fa-tiktok"></i></div>
-            <div>
-              <div class="label">TikTok</div>
-              <div class="sub">Reels, detrás de cámaras y tips</div>
-            </div>
-            <div class="cta">Ver videos</div>
-          </a>
-
-          <a class="btn facebook" href="https://www.facebook.com/visual.corp.9" target="_blank" rel="noopener" aria-label="Abrir Facebook de Visual Corp">
-            <div class="icon" aria-hidden="true"><i class="fa-brands fa-facebook-f"></i></div>
-            <div>
-              <div class="label">Facebook</div>
-              <div class="sub">Novedades y contacto</div>
-            </div>
-            <div class="cta">Abrir</div>
-          </a>
+        <div class="contact-actions">
+          <a href="https://wa.me/593967872396" target="_blank" rel="noopener" class="btn whatsapp"><i class="fa-brands fa-whatsapp"></i> Escribir por WhatsApp</a>
+          <a href="https://m.me/visualcorpec" target="_blank" rel="noopener" class="btn messenger"><i class="fa-brands fa-facebook-messenger"></i> Enviar por Messenger</a>
+          <a href="mailto:visualcorp@hotmail.com" class="btn email"><i class="fa-solid fa-envelope"></i> Enviar un Email</a>
         </div>
-      </div>
-    </section>
+      </article>
 
-    <footer>
-      © <span id="year"></span> Visual Corp · Milagro, Ecuador
-    </footer>
-  </main>
+      <div class="content-grid">
+        <article class="card-full">
+          <h2>Cómo Llegar</h2>
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.9739527634213!2d-79.59250002580796!3d-2.148119837500355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d15918a55255b%3A0xe2041a99f36f6259!2sVisual%20Corp!5e0!3m2!1ses-419!2sec!4v1727978438258!5m2!1ses-419!2sec" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen=""></iframe>
+          </div>
+        </article>
+
+        <article class="card-full">
+          <h2>Nuestro Trabajo</h2>
+          <div class="video-container">
+            <video src="img/video-corporativo.mp4" controls="" preload="metadata" playsinline=""></video>
+          </div>
+        </article>
+
+        <article class="card-full">
+          <h2>Galería de Proyectos</h2>
+          <div class="gallery-grid">
+            <img class="gallery-image" src="img/foto1.png" alt="Proyecto 1">
+            <img class="gallery-image" src="img/foto2.png" alt="Proyecto 2">
+            <img class="gallery-image" src="img/foto3.png" alt="Proyecto 3">
+            <img class="gallery-image" src="img/foto4.png" alt="Proyecto 4">
+            <img class="gallery-image" src="img/foto5.png" alt="Proyecto 5">
+            <img class="gallery-image" src="img/foto6.png" alt="Proyecto 6">
+            <img class="gallery-image" src="img/foto7.png" alt="Proyecto 7">
+            <img class="gallery-image" src="img/foto8.png" alt="Proyecto 8">
+          </div>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+    <img id="lightboxImg" alt="Vista ampliada">
+  </div>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+    document.addEventListener('DOMContentLoaded', function(){
+      const headerEl = document.querySelector('header');
+      if (headerEl) {
+        const onScroll = () => headerEl.classList.toggle('scrolled', window.scrollY > 8);
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive:true });
+      }
 
+      // Lightbox
+      const lightboxEl = document.getElementById('lightbox');
+      if (lightboxEl) {
+        const lightboxImgEl = document.getElementById('lightboxImg');
+        function openLightbox(src, alt='') { lightboxImgEl.src = src; lightboxImgEl.alt = alt; lightboxEl.classList.add('open'); }
+        function closeLightbox() { lightboxEl.classList.remove('open'); }
+        document.querySelectorAll('.gallery-image').forEach(img => img.addEventListener('click', () => openLightbox(img.src, img.alt)));
+        lightboxEl.addEventListener('click', e => { if (e.target === lightboxEl) closeLightbox(); });
+        window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+      }
+
+      // Estado Abierto/Cerrado
+      function checkOpenStatus(){
+        const now = new Date();
+        const day = now.getDay();
+        const hour = now.getHours();
+        if (day === 0) return { isOpen:false, message:'Cerrado ahora' };
+        if (day === 6) return (hour >= 9 && hour < 13) ? { isOpen:true, message:'Abierto ahora' } : { isOpen:false, message:'Cerrado ahora' };
+        if (day >= 1 && day <= 5) return (hour >= 9 && hour < 18) ? { isOpen:true, message:'Abierto ahora' } : { isOpen:false, message:'Cerrado ahora' };
+        return { isOpen:false, message:'Cerrado ahora' };
+      }
+      function updateStatusDisplay(){
+        const container = document.getElementById('status-container');
+        const indicator = document.getElementById('status-indicator');
+        const text = document.getElementById('status-text');
+        if(!container || !indicator || !text) return;
+        const status = checkOpenStatus();
+        text.textContent = status.message;
+        container.className = 'status-display';
+        indicator.className = '';
+        if(status.isOpen){ container.classList.add('open'); indicator.classList.add('open'); }
+        else{ container.classList.add('closed'); indicator.classList.add('closed'); }
+      }
+      updateStatusDisplay();
+      setInterval(updateStatusDisplay, 60000);
+    });
+  </script>
+
+</body><div></div></html>
