@@ -119,50 +119,62 @@
 <body>
   <div class="wrap">
     <!-- ===== NAVBAR ===== -->
-    <header class="vc-header">
-      <a class="vc-brand" href="https://visualcorp-ec.github.io/Inicio/">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmSKnD00M-kkEpOeoGxEL9UP7_Zfgf8Ug33Q&amp;s" alt="Visual Corp">
-        <span>Visual Corp</span>
-      </a>
-      <button class="vc-burger" aria-controls="vc-menu" aria-expanded="false" title="Abrir menú"><i class="fa-solid fa-bars"></i></button>
-      <nav id="vc-menu" class="vc-menu" aria-label="Menú principal">
-      <a id="nav-inicio" href="https://visualcorp-ec.github.io/Inicio/">Inicio</a>
-      <a id="nav-contacto" href="https://visualcorp-ec.github.io/contacto/">Contacto</a>
-      <a id="nav-promos" href="https://visualcorp-ec.github.io/PROMO-ANIVERSARIO18/">Promociones</a>
-        <a id="nav-catalogo" href="/catalogo.html" data-pending="" data-match="/catalogo">Catálogo</a>
-        <div class="vc-has-sub">
-          <button class="vc-subbtn" type="button" data-match="/productos" data-pending="" aria-expanded="false">Productos <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
-          <div class="vc-submenu" role="menu">
-            <a href="/productos.html" data-pending="" role="menuitem">Todos</a>
-            <a href="/productos.html#letras-3d" data-pending="" role="menuitem">Letras 3D</a>
-            <a href="/productos.html#neon" data-pending="" role="menuitem">Neón</a>
-            <a href="/productos.html#rotulos" data-pending="" role="menuitem">Rótulos</a>
-            <a href="/productos.html#stands" data-pending="" role="menuitem">Stands</a>
-            <a href="/productos.html#stickers" data-pending="" role="menuitem">Stickers</a>
-          </div>
-        </div>
-        <div class="vc-has-sub">
-          <button class="vc-subbtn" type="button" data-match="/impresiones" data-pending="" aria-expanded="false">Impresiones <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
-          <div class="vc-submenu" role="menu">
-            <a href="/impresiones.html" data-pending="" role="menuitem">Todas</a>
-            <a href="/impresiones.html#gigantografias" data-pending="" role="menuitem">Gigantografías</a>
-            <a href="/impresiones.html#microperforado" data-pending="" role="menuitem">Microperforado</a>
-            <a href="/impresiones.html#banners" data-pending="" role="menuitem">Banners</a>
-            <a href="/impresiones.html#vinil" data-pending="" role="menuitem">Vinil</a>
-          </div>
-        </div>
-        <div class="vc-has-sub">
-          <button class="vc-subbtn" type="button" data-match="/servicios" data-pending="" aria-expanded="false">Servicios <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
-          <div class="vc-submenu" role="menu">
-            <a href="/servicios.html" data-pending="" role="menuitem">Todos</a>
-            <a href="/servicios.html#diseno" data-pending="" role="menuitem">Diseño gráfico</a>
-            <a href="/servicios.html#instalacion" data-pending="" role="menuitem">Instalación</a>
-            <a href="/servicios.html#mantenimiento" data-pending="" role="menuitem">Mantenimiento</a>
-          </div>
-        </div>
-        <a id="nav-taller" href="/taller.html" data-pending="" data-match="/taller">Taller</a>
-      </nav>
-    </header>
+<header class="vc-header" role="banner">
+  <a class="vc-brand" href="https://visualcorp-ec.github.io/Inicio/">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmSKnD00M-kkEpOeoGxEL9UP7_Zfgf8Ug33Q&s" alt="Visual Corp">
+    <span>Visual Corp</span>
+  </a>
+
+  <button class="vc-burger" aria-controls="vc-menu" aria-expanded="false" title="Abrir menú">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
+  <nav id="vc-menu" class="vc-menu" aria-label="Menú principal">
+    <!-- Enlaces válidos -->
+    <a id="nav-inicio"   href="https://visualcorp-ec.github.io/Inicio/">Inicio</a>
+    <a id="nav-contacto" href="https://visualcorp-ec.github.io/contacto/">Contacto</a>
+    <a id="nav-promos"   href="https://visualcorp-ec.github.io/PROMO-ANIVERSARIO18/">Promociones</a>
+
+    <!-- Bloques con submenú (pronto) -->
+    <div class="vc-has-sub">
+      <button class="vc-subbtn" type="button" data-pending="" aria-expanded="false">
+        Productos <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+      </button>
+      <div class="vc-submenu" role="menu" aria-label="Productos">
+        <a href="#" role="menuitem" aria-disabled="true">Todos (pronto)</a>
+        <a href="#" role="menuitem" aria-disabled="true">Letras 3D (pronto)</a>
+        <a href="#" role="menuitem" aria-disabled="true">Neón (pronto)</a>
+        <a href="#" role="menuitem" aria-disabled="true">Rótulos (pronto)</a>
+        <a href="#" role="menuitem" aria-disabled="true">Stands (pronto)</a>
+        <a href="#" role="menuitem" aria-disabled="true">Stickers (pronto)</a>
+      </div>
+    </div>
+
+    <div class="vc-has-sub">
+      <button class="vc-subbtn" type="button" data-pending="" aria-expanded="false">
+        Impresiones <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+      </button>
+      <div class="vc-submenu" role="menu" aria-label="Impresiones">
+        <a href="#" role="menuitem" aria-disabled="true">Gigantografías (pronto)</a>
+        <a href="#" role="menuitem" aria-disabled="true">Microperforado (pronto)</a>
+        <a href="#" role="menuitem" aria-disabled="true">Banners (pronto)</a>
+        <a href="#" role="menuitem" aria-disabled="true">Vinil (pronto)</a>
+      </div>
+    </div>
+
+    <div class="vc-has-sub">
+      <button class="vc-subbtn" type="button" data-pending="" aria-expanded="false">
+        Servicios <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+      </button>
+      <div class="vc-submenu" role="menu" aria-label="Servicios">
+        <a href="#" role="menuitem" aria-disabled="true">Diseño gráfico (pronto)</a>
+        <a href="#" role="menuitem" aria-disabled="true">Instalación (pronto)</a>
+        <a href="#" role="menuitem" aria-disabled="true">Mantenimiento (pronto)</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
 
     <main>
       <section class="hero">
@@ -396,7 +408,106 @@
     function checkOpenStatus(){ const now=new Date(); const day=now.getDay(); const hour=now.getHours(); if(day===0) return {isOpen:false,message:'Cerrado ahora'}; if(day===6) return (hour>=9&&hour<13)?{isOpen:true,message:'Abierto ahora'}:{isOpen:false,message:'Cerrado ahora'}; if(day>=1&&day<=5) return (hour>=9&&hour<18)?{isOpen:true,message:'Abierto ahora'}:{isOpen:false,message:'Cerrado ahora'}; return {isOpen:false,message:'Cerrado ahora'} }
     function updateStatusDisplay(){ const container=document.getElementById('status-container'); const indicator=document.getElementById('status-indicator'); const text=document.getElementById('status-text'); if(!container||!indicator||!text) return; const status=checkOpenStatus(); text.textContent=status.message; container.className='status-display'; indicator.className=''; if(status.isOpen){ container.classList.add('open'); indicator.classList.add('open'); } else { container.classList.add('closed'); indicator.classList.add('closed'); } }
     updateStatusDisplay(); setInterval(updateStatusDisplay, 60000);
+    //----------------------------
+      (function(){
+        const burger  = document.querySelector('.vc-burger');
+        const menu    = document.getElementById('vc-menu');
+        const subBtns = document.querySelectorAll('.vc-subbtn');
+      
+        // --- Abrir/cerrar menú móvil
+        burger?.addEventListener('click', ()=>{
+          const open = menu.classList.toggle('open');
+          burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      
+        // --- Cerrar al tocar un enlace dentro del menú
+        menu.addEventListener('click', (e)=>{
+          const tag = (e.target as HTMLElement).closest('a');
+          if(tag && menu.classList.contains('open')){
+            menu.classList.remove('open');
+            burger.setAttribute('aria-expanded','false');
+          }
+        });
+      
+        // --- Submenús en móvil (en desktop se abren con hover por CSS)
+        subBtns.forEach(btn=>{
+          btn.addEventListener('click', (ev)=>{
+            // solo activa por click si estamos en móvil o menú abierto
+            const isMobile = window.matchMedia('(max-width: 900px)').matches || menu.classList.contains('open');
+            if(!isMobile) return;
+            ev.preventDefault();
+            const box = btn.closest('.vc-has-sub');
+            const open = !box.classList.contains('open');
+      
+            // cerrar otros submenús
+            menu.querySelectorAll('.vc-has-sub.open').forEach(o=>{ if(o!==box) o.classList.remove('open'); });
+      
+            box.classList.toggle('open', open);
+            btn.classList.toggle('is-active', open);
+            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+          });
+        });
+      
+        // --- Cerrar haciendo clic fuera o con ESC
+        document.addEventListener('click', (e)=>{
+          if(!menu.contains(e.target) && !burger.contains(e.target)){
+            menu.classList.remove('open');
+            burger.setAttribute('aria-expanded','false');
+            document.querySelectorAll('.vc-has-sub').forEach(n=>{
+              n.classList.remove('open');
+              n.querySelector('.vc-subbtn')?.setAttribute('aria-expanded','false');
+              n.querySelector('.vc-subbtn')?.classList.remove('is-active');
+            });
+          }
+        });
+        document.addEventListener('keydown', (e)=>{
+          if(e.key === 'Escape'){
+            menu.classList.remove('open');
+            burger.setAttribute('aria-expanded','false');
+            document.querySelectorAll('.vc-has-sub').forEach(n=>{
+              n.classList.remove('open');
+              n.querySelector('.vc-subbtn')?.setAttribute('aria-expanded','false');
+              n.querySelector('.vc-subbtn')?.classList.remove('is-active');
+            });
+          }
+        });
+      
+        // --- Marcar activo según URL (tus 3 enlaces válidos)
+        const map = {
+          'nav-inicio':   'https://visualcorp-ec.github.io/Inicio/',
+          'nav-contacto': 'https://visualcorp-ec.github.io/contacto/',
+          'nav-promos':   'https://visualcorp-ec.github.io/PROMO-ANIVERSARIO18/'
+        };
+        const here = location.href;
+        Object.entries(map).forEach(([id,url])=>{
+          const a = document.getElementById(id);
+          if(a && here.startsWith(url)){
+            a.setAttribute('aria-current','page');
+            a.classList.add('active');
+          }
+        });
+      
+        // --- UX: scroll horizontal con rueda y arrastre para la barra
+        (function enhanceMenuScroll(){
+          if(!menu) return;
+          // rueda vertical -> scroll horizontal
+          menu.addEventListener('wheel', (e)=>{
+            const dx = Math.abs(e.deltaX), dy = Math.abs(e.deltaY);
+            if(dy > dx){ menu.scrollLeft += e.deltaY; e.preventDefault(); }
+          }, {passive:false});
+          // drag to scroll
+          let down=false, startX=0, startLeft=0;
+          menu.addEventListener('pointerdown',(e)=>{ down=true; startX=e.pageX; startLeft=menu.scrollLeft; menu.setPointerCapture(e.pointerId); });
+          menu.addEventListener('pointermove',(e)=>{ if(!down) return; menu.scrollLeft = startLeft - (e.pageX - startX); });
+          ['pointerup','pointercancel','pointerleave'].forEach(ev=> menu.addEventListener(ev, ()=> down=false));
+        })();
+      })();
+
+
+    
   </script>
+
+  
 
 
 </body></html>
